@@ -67,18 +67,19 @@ public class Simmerjockey {
 			} else if (isChild && !hasModifier) {
 				attr.applyModifier(CHILD_SPEED);
 			}
-		} else if (entity instanceof EntityInhooS) {
-			
+
+		} else if (entity instanceof EntityInhooS) { // If the entity is a small inc form
+
 			// Get riding entities
 			List<Entity> passengers = entity.getPassengers();
-			
+
 			// get the attribute instance
 			IAttributeInstance attr = entity.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED);
 
 			// Store the states
 			boolean riddenByChild = !passengers.isEmpty() && passengers.get(0) instanceof IInfHumanExt && ((EntityLivingBase) passengers.get(0)).isChild();
 			boolean hasModifier = attr.hasModifier(RIDDEN_SPEED);
-			
+
 			// if it is being ridden by a child and lacking the modifier, add it. if its not being ridden by a child and has the modifier, remove it.
 			if (!riddenByChild && hasModifier) {
 				attr.removeModifier(RIDDEN_SPEED);
