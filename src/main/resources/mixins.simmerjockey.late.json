@@ -1,0 +1,15 @@
+{
+    "required": true,
+    "compatibilityLevel": "JAVA_8",
+    "package": "com.existingeevee.simmerjockey.mixin",
+    "refmap": "refmap.simmerjockey.json",
+    "minVersion": "0.8",
+    
+	"mixins": [
+	    "MixinInfHuman"
+	],
+    "client": [
+        "MixinModelInfHuman"
+    ],
+    "server": []
+}

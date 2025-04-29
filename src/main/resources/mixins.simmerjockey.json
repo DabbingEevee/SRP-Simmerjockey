@@ -1,0 +1,10 @@
+{
+    "compatibilityLevel": "JAVA_8",
+    "package": "com.existingeevee.simmerjockey.mixin",
+    "refmap": "refmap.simmerjockey.json",
+    "mixins": [
+        "MixinLoaderLateConfigs"
+        ],
+    "client": [],
+    "server": []
+}
